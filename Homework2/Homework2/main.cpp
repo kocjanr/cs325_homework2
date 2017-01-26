@@ -7,9 +7,28 @@
 //
 
 #include <iostream>
+#include "InsertionSort.cpp"
+using namespace std;
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    int input;
+    int exit = 00;
+    
+    InsertionSort insertion = *new InsertionSort();
+    
+    std::cout << "Enter 00 to quit." << std::endl;
+    
+    do
+    {
+        std::cout << ">: ";
+        std::cin >> input;
+        
+        insertion.add(input);
+        
+    }while(input != exit);
+    
+    insertion.popLastElement();
+    insertion.print();
+    
     return 0;
 }
