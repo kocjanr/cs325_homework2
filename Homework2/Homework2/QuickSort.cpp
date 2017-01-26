@@ -34,7 +34,15 @@ public:
 private:
     
     void quickSort(std::vector<int> &input){
+        
+        int pivot = pivotPoint(input[0], input[input.size() -1]);
+        cout << pivot;
     
+    }
+    
+    int pivotPoint(int start, int end) {
+        
+        return (start + end ) / 2;
     }
     
     void printVector(){

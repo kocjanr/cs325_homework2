@@ -26,22 +26,27 @@ int main(int argc, const char * argv[]) {
         std::cin >> input;
         
         insertion.add(input);
+        quick.add(input);
         
     }while(input != exit);
     cout << endl;
+    cout << "Numbers entered: ";
+    insertion.print();
     
     //Insertion Sort
     insertion.popLastElement();
-    cout << "Numbers entered: ";
-    insertion.print();
+    
     cout << endl;
     cout << "Insertion sort: ";
     insertion.sort();
     insertion.print();
     
     cout << endl;
-    
     //Quick Sort
+    quick.popLastElement();
+    cout << "Quick sort: ";
+    quick.sort();
     
+    cout << endl;
     return 0;
 }
