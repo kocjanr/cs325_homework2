@@ -1,8 +1,8 @@
 //
-//  InsertionSort.cpp
+//  QuickSort.cpp
 //  Homework2
 //
-//  Created by Ryan Kojan on 1/25/17.
+//  Created by Ryan Kojan on 1/26/17.
 //  Copyright © 2017 Ryan Kojan. All rights reserved.
 //
 
@@ -11,8 +11,8 @@
 #include <vector>
 using namespace std;
 
-class InsertionSort {
-    
+class QuickSort {
+
 public:
     
     void add(int input) {
@@ -23,29 +23,18 @@ public:
         _numbers.pop_back();
     }
     
-    void sort() {
-        insertionSort();
-    }
-    
     void print() {
         printVector();
     }
     
+    void sort() {
+        quickSort(_numbers);
+    }
+    
 private:
     
-    void insertionSort(){
-        int in;
-        
-        for (int out = 1; out < _numbers.size(); out++) {
-            int temp = _numbers[out];
-            in = out;
-            
-            while (in > 0 && _numbers[in-1] >= temp) {
-                _numbers[in] = _numbers[in-1];
-                --in;
-            }
-            _numbers[in] = temp;
-        }
+    void quickSort(std::vector<int> &input){
+    
     }
     
     void printVector(){
@@ -53,6 +42,7 @@ private:
             std::cout << _numbers[i] << " ";
         }
     }
-    
+
     std::vector<int> _numbers;
+
 };
