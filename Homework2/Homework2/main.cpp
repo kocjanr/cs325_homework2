@@ -35,13 +35,13 @@ int main(int argc, const char * argv[]) {
     
     //Insertion Sort
     insertion.popLastElement();
-    
     cout << endl;
     cout << "Insertion sort: ";
     insertion.sort();
     insertion.print();
-    
     cout << endl;
+    
+    
     //Quick Sort
     quick.popLastElement();
     cout << "Quick sort: ";

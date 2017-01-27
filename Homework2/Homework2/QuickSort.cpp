@@ -35,14 +35,36 @@ private:
     
     void quickSort(std::vector<int> &input){
         
-        int pivot = pivotPoint(input[0], input[input.size() -1]);
-        cout << pivot;
+        int left = input[0];
+        int right = input[input.size()+1];
+        
+        int size = (int) (input.end() - input.begin()) + 1;
+        
+        if (size <= 3) {
+            //manual sort
+        }
+        
+        else{
+            
+        
+        }
+        
+    
+    }
+    
+    void order(int a, int b) {
     
     }
     
     int pivotPoint(int start, int end) {
         
-        return (start + end ) / 2;
+        int centerPoint = (start + end) / 2;
+        
+        return centerPoint;
+    }
+    
+    void swap(int a, int b) {
+    
     }
     
     void printVector(){
