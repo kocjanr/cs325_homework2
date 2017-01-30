@@ -28,43 +28,55 @@ public:
     }
     
     void sort() {
-        quickSort(_numbers);
+        
+        int first = _numbers[0];
+        int last = _numbers[_numbers.size()-1];
+        
+        quickSort(_numbers, first, last);
     }
     
 private:
     
-    void quickSort(std::vector<int> &input){
+    void quickSort(std::vector<int> vector, int left, int right){
         
-        int left = input[0];
-        int right = input[input.size()+1];
-        
-        int size = (int) (input.end() - input.begin()) + 1;
-        
-        if (size <= 3) {
-            //manual sort
+        if (left >= right) {
+            return;
         }
         
-        else{
+        int pivot = (left+right) / 2;
+        int index = vectorPartition(vector, left, right, pivot);
+        
+        quickSort(vector, left, index-1);
+        quickSort(vector, index, right);
+    
+    }
+    
+    int vectorPartition(std::vector<int> vector, int left, int right, int pivot){
+        
+        while (left < right){
             
-        
+            while (vector[right] < pivot) {
+                left++;
+            }
+            
+            while (vector[right] > pivot) {
+                right--;
+            }
+            
+            if(left < right){
+                swapElements(left, right);
+                left++;
+                right--;
+            }
         }
-        
     
+        return left;
     }
     
-    void order(int a, int b) {
-    
-    }
-    
-    int pivotPoint(int start, int end) {
-        
-        int centerPoint = (start + end) / 2;
-        
-        return centerPoint;
-    }
-    
-    void swap(int a, int b) {
-    
+    void swapElements(int element1, int element2){
+        int temp = _numbers[element1];
+        _numbers[element1] = _numbers[element2];
+        _numbers[element2] = temp;
     }
     
     void printVector(){
@@ -73,6 +85,7 @@ private:
         }
     }
 
+    //Class virables
     std::vector<int> _numbers;
-
+    int count = (int) _numbers.size();
 };

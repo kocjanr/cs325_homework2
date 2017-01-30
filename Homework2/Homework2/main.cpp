@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
         insertion.add(input);
         quick.add(input);
         
-    }while(input != exit);
+    } while(input != exit);
     cout << endl;
     cout << "Numbers entered: ";
     insertion.print();
@@ -45,7 +45,13 @@ int main(int argc, const char * argv[]) {
     //Quick Sort
     quick.popLastElement();
     cout << "Quick sort: ";
-    quick.sort();
+    //quick.sort();
+    quick.print();
+    
+    
+    //Radix Sort
+    cout << "Radix sort: ";
+    
     
     cout << endl;
     return 0;
