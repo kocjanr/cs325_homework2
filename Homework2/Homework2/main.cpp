@@ -38,6 +38,13 @@ int main(int argc, const char * argv[]) {
     insertion.print();
     cout << endl;
     
+    //Insertion Sort
+    insertion.popLastElement();
+    cout << endl;
+    cout << "Insertion sort: ";
+    insertion.sort();
+    insertion.print();
+    cout << endl;
     
     //Radix Sort
     cout << "Radix sort: ";
@@ -45,8 +52,11 @@ int main(int argc, const char * argv[]) {
     //radix.print();
     radix.sort();
     
-    
-
+    //Quick Sort
+    quick.popLastElement();
+    cout << "Quick sort: ";
+    //quick.sort();
+    quick.print();
     
     cout << endl;
     return 0;
