@@ -38,96 +38,35 @@ public:
         return 1;
     }
     
-    void findValueToSortBy(int number, int digitPlace){
+    int findValueToSortBy(int number, int digitPlace){
         
-        int temp;
-        
-        return addToBucket(temp);
-    
+        int value = (digitPlace == 0) ? number % 10 : findValueToSortBy(number/10, --digitPlace);
+        int inputNumber = number;
+        return addToBucket(value, inputNumber);
+
     }
     
-    void addToBucket(int input){
+
+    
+    int addToBucket(int digit, int number){
+        cout << "Add to bucket:" << endl;
+        cout << "Digit: " << digit << " " << "Number: " << number << " " << endl;
         
-        int count;
-        
-        std::vector<int> zero;
-        std::vector<int> one;
-        std::vector<int> two;
-        std::vector<int> three;
-        std::vector<int> four;
-        std::vector<int> five;
-        std::vector<int> six;
-        std::vector<int> seven;
-        std::vector<int> eight;
-        std::vector<int> nine;
-        
-        if (input == 0) {
-            zero.push_back(input);
-            count++;
-        }
-        
-        if (input == 1) {
-            one.push_back(input);
-            count++;
-        }
-        
-        if (input == 2) {
-            two.push_back(input);
-            count++;
-        }
-        
-        if (input == 3) {
-            three.push_back(input);
-            count++;
-        }
-        
-        if (input == 4) {
-            four.push_back(input);
-            count++;
-        }
-        
-        if (input == 5) {
-            five.push_back(input);
-            count++;
-        }
-        
-        if (input == 6) {
-            six.push_back(input);
-            count++;
-        }
-        
-        if (input == 7) {
-            seven.push_back(input);
-            count++;
-        }
-        
-        if (input == 8) {
-            eight.push_back(input);
-            count++;
-        }
-        
-        if (input == 9) {
-            nine.push_back(input);
-            count++;
-        }
-        
-        else if (count == _numbers.size()){
-        
-        }
+        return 1;
     
     }
 
     void sort(){
-        int digitIndex = 3;
         
-        while (digitIndex < 1) {
-            
-            for (int i = 0; i < _numbers.size() - 1; i++) {
-                
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < _numbers.size(); j++) {
+                int value;
+                value = findValueToSortBy(_numbers[j], i);
+                value = 0;
             }
-            
-            digitIndex--;
         }
+        
+
     }
     
     void printVector(std::vector<int> &input){

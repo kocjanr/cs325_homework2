@@ -42,8 +42,11 @@ int main(int argc, const char * argv[]) {
     //Radix Sort
     cout << "Radix sort: ";
     radix.popOffLastElement();
-    radix.print();
+    //radix.print();
+    radix.sort();
     
+    
+
     
     cout << endl;
     return 0;
