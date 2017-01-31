@@ -9,6 +9,7 @@
 #include <iostream>
 #include "InsertionSort.cpp"
 #include "QuickSort.cpp"
+#include "radixSort.cpp"
 using namespace std;
 
 int main(int argc, const char * argv[]) {
@@ -17,6 +18,7 @@ int main(int argc, const char * argv[]) {
     
     InsertionSort insertion = *new InsertionSort();
     QuickSort quick = *new QuickSort();
+    radixSort radix = *new radixSort();
     
     std::cout << "Enter 00 to quit." << std::endl;
     
@@ -27,6 +29,7 @@ int main(int argc, const char * argv[]) {
         
         insertion.add(input);
         quick.add(input);
+        radix.add(input);
         
     } while(input != exit);
     cout << endl;
@@ -51,6 +54,7 @@ int main(int argc, const char * argv[]) {
     
     //Radix Sort
     cout << "Radix sort: ";
+    radix.print();
     
     
     cout << endl;

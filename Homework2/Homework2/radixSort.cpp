@@ -12,11 +12,9 @@
 using namespace std;
 
 class radixSort{
-    
-    radixSort(){
-        
-    }
-    
+   
+public:
+
     void add(int input){
         _numbers.push_back(input);
     }
@@ -25,29 +23,103 @@ class radixSort{
         _numbers.pop_back();
     }
     
-    int sortingValue(int element, int digitPosition){
+    void print(){
+        printVector(_numbers);
         
-        int arrayOfvalue[3];
-        int value;q
-        
-        for (int i = 0; i < digitPosition; i++) {
-            //get element from place
-        }
-        
+    }
+    
+    
+    
+    
+    
+    
+    int digitLength(int input) {
+    
         return 1;
     }
     
-    void addToBucket(std::vector<int> list, int digitPlace){
+    void findValueToSortBy(int digitPlace){
         
-        int digitToSortBy;
+        int temp;
+        
+        return addToBucket(temp);
+    
+    }
+    
+    void addToBucket(int input){
+        
+        int count;
+        
+        std::vector<int> zero;
+        std::vector<int> one;
+        std::vector<int> two;
+        std::vector<int> three;
+        std::vector<int> four;
+        std::vector<int> five;
+        std::vector<int> six;
+        std::vector<int> seven;
+        std::vector<int> eight;
+        std::vector<int> nine;
+        
+        if (input == 0) {
+            zero.push_back(input);
+            count++;
+        }
+        
+        if (input == 1) {
+            one.push_back(input);
+            count++;
+        }
+        
+        if (input == 2) {
+            two.push_back(input);
+            count++;
+        }
+        
+        if (input == 3) {
+            three.push_back(input);
+            count++;
+        }
+        
+        if (input == 4) {
+            four.push_back(input);
+            count++;
+        }
+        
+        if (input == 5) {
+            five.push_back(input);
+            count++;
+        }
+        
+        if (input == 6) {
+            six.push_back(input);
+            count++;
+        }
+        
+        if (input == 7) {
+            seven.push_back(input);
+            count++;
+        }
+        
+        if (input == 8) {
+            eight.push_back(input);
+            count++;
+        }
+        
+        if (input == 9) {
+            nine.push_back(input);
+            count++;
+        }
+        
+        else if (count == _numbers.size()){
+        
+        }
     
     }
 
     void sort(){
         int digitIndex = 3;
         int digitvalue;
-        //int array[10];
-        std::vector<int [10]> bucket;
         
         while (digitIndex < 1) {
             
@@ -59,7 +131,7 @@ class radixSort{
         }
     }
     
-    void print(std::vector<int> &input){
+    void printVector(std::vector<int> &input){
         for (int i = 0; i < input.size(); i++) {
             cout << input[i] << " ";
         }
@@ -67,8 +139,5 @@ class radixSort{
     
     
     std::vector<int> _numbers;
-    std::vector<int> _sortedNumbers;
     std::vector<int> _bucket;
-    int _numbersSize = (int) _numbers.size();
-
 };
