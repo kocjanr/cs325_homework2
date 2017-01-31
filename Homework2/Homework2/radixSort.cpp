@@ -38,7 +38,7 @@ public:
         return 1;
     }
     
-    void findValueToSortBy(int digitPlace){
+    void findValueToSortBy(int number, int digitPlace){
         
         int temp;
         
@@ -119,7 +119,6 @@ public:
 
     void sort(){
         int digitIndex = 3;
-        int digitvalue;
         
         while (digitIndex < 1) {
             

@@ -34,26 +34,14 @@ int main(int argc, const char * argv[]) {
     } while(input != exit);
     cout << endl;
     cout << "Numbers entered: ";
-    insertion.print();
-    
-    //Insertion Sort
     insertion.popLastElement();
-    cout << endl;
-    cout << "Insertion sort: ";
-    insertion.sort();
     insertion.print();
     cout << endl;
-    
-    
-    //Quick Sort
-    quick.popLastElement();
-    cout << "Quick sort: ";
-    //quick.sort();
-    quick.print();
     
     
     //Radix Sort
     cout << "Radix sort: ";
+    radix.popOffLastElement();
     radix.print();
     
     
